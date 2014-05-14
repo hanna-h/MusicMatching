@@ -139,7 +139,7 @@
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="73.84375" modelName="custom" textColor="#000000" visible="true" width="210.291015625" x="-46.18709607988933" y="87.125">+ CurrentLocation (apiKey, string)
 + getCountry: string
 - getLating
-- succes (position, geocode)
+- succes (position, geolocation)
 - geocodingPossible: bool<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
@@ -345,8 +345,8 @@
           <y:Fill hasColor="false" transparent="false"/>
           <y:BorderStyle hasColor="false" type="line" width="1.0"/>
           <y:NodeLabel alignment="left" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="115.75" modelName="free" modelPosition="anywhere" textColor="#000000" visible="true" width="258.26171875" x="28.2919921875" y="17.734375">- apiKey: string
-- percentage
-- artists
+- percentage: int
+- artists: string
 
 + TasteOMeter(apiKey, string)
 + callTasteOMeter(user2, string, limit, int)
