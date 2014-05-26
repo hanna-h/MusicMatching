@@ -1,7 +1,9 @@
 package nl.han.ica.daretwodate.dao;
 
-import nl.han.ica.daretwodate.model.MatchMusicTaste;
+import nl.han.ica.daretwodate.model.Users;
 
 public interface iMatchMusicTasteDao {
-    void save(MatchMusicTaste matcher);
+    void save(Users user);
+    void getUsers();
+    Users getUser(String username);
 }

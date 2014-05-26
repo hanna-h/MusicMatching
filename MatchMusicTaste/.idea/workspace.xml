@@ -36,19 +36,23 @@
       <file leaf-file-name="iMatchMusicTasteDao.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/iMatchMusicTasteDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MatchMusicTasteDao.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MatchMusicTasteDao.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/MatchMusicTasteDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-              <folding />
+            <state vertical-scroll-proportion="0.6818182" vertical-offset="180" max-vertical-offset="585">
+              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,22 +67,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Users.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Users.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/model/Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3409091" vertical-offset="0" max-vertical-offset="645">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="675">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
               <folding>
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="e#453#454#0" expanded="true" />
-                <element signature="e#488#489#0" expanded="true" />
+                <element signature="e#455#456#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
                 <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#560#561#0" expanded="true" />
-                <element signature="e#597#598#0" expanded="true" />
+                <element signature="e#550#551#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
                 <element signature="e#628#629#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
                 <element signature="e#721#722#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,10 +102,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/MatchMusicTaste/types.xsd" />
         <option value="$PROJECT_DIR$/src/main/resources/nl/han/ica/daretwodate/MatchMusicTasteResult.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-ws-servlet.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/iMatchMusicTasteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/model/MatchMusicTaste.java" />
-        <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/MatchMusicTasteDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/model/Users.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/MatchMusicTasteDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/iMatchMusicTasteDao.java" />
       </list>
     </option>
   </component>
@@ -778,12 +782,12 @@
       <updated>1400838651637</updated>
       <workItem from="1400838660625" duration="51000" />
       <workItem from="1400838713118" duration="8603000" />
-      <workItem from="1401093260933" duration="8460000" />
+      <workItem from="1401093260933" duration="10034000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17114000" />
+    <option name="totallyTimeSpent" value="18688000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="769" extended-state="6" />
@@ -988,22 +992,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/iMatchMusicTasteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/MatchMusicTasteDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/domain/MatchMusicTasteEndpoint.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
@@ -1014,19 +1002,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/model/Users.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3409091" vertical-offset="0" max-vertical-offset="645">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="675">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
           <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#488#489#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
             <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#560#561#0" expanded="true" />
-            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#550#551#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
             <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
             <element signature="e#721#722#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/iMatchMusicTasteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/nl/han/ica/daretwodate/dao/MatchMusicTasteDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6818182" vertical-offset="180" max-vertical-offset="585">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
           </folding>
         </state>
       </provider>

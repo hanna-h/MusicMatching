@@ -1,12 +1,14 @@
 package nl.han.ica.daretwodate.model;
 
+import javax.persistence.*;
+
 @Entity
 @Table(name = "Users")
 public class Users {
     @Id
     @Column(name = "userId")
     private long userId;
-    @Column(na = "realName")
+    @Column(name = "realName")
     private String realName;
     @Column(name = "lastfmUserName")
     private String lastfmUserName;
