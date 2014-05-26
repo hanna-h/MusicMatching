@@ -1,0 +1,19 @@
+dao
+	iMatchMusicTasteDao
+	MatchMusicTasteDao
+
+domain
+	MatchMusicTaste
+
+services
+	MatchMusicTasteEndpoint
+	CurrentLocation
+	TasteOMeter
+	EventsForArtist
+	LoginOnLastfm
+	JoinEvent
+	DatabaseHandler
+	UsersInformation
+
+data
+	Users
