@@ -29,7 +29,6 @@ public class CurrentLocation implements ICurrentLocation {
 
                 NodeList country = doc.getElementsByTagName("CountryName");
                 Element line = (Element) country.item(0);
-                System.out.println("country: " + getCharacterDataFromElement(line));
 
                 result = getCharacterDataFromElement(line);
 

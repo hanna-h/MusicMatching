@@ -42,18 +42,31 @@ public class MatchMusicTasteEndpoint {
     @SuppressWarnings({"unchecked", "deprecation"})
     @PayloadRoot(localPart = "MatchMusicTasteRequest", namespace = "http://www.han.nl/schemas/messages")
     public MatchMusicTasteResponse doMusicMatching(MatchMusicTasteRequest req) {
-        System.out.println(matchMusicTasteDao.getUser("fairyglen").getLastfmUsername());
-
         String lastfmApiKey = req.getInput().getLastfmApiKey();
+        String lastfmSecret = req.getInput().getLastfmSecret();
+        String ipAddress = req.getInput().getIpaddress();
+        String user1 = req.getInput().getUsername1();
+        String user2 = req.getInput().getUsername2();
+
+        System.out.println("Get user from database test: " + matchMusicTasteDao.getUser("fairyglen").getLastfmUsername());
+
+        loginOnLastfm.login(user1, "rainbow", lastfmApiKey, lastfmSecret);
+        System.out.println("Login session key: " + loginOnLastfm.getSessionKey());
+
+        tasteOMeter.callTasteOMeter(user1, user2, "10", lastfmApiKey);
+        System.out.println("Taste-o-Meter score: " + tasteOMeter.getTasteOMeterPercentage());
+        List<String> commonArtists = tasteOMeter.getTasteOMeterArtists();
+        for (int i = 0; i < commonArtists.size(); i++) {
+            System.out.println(commonArtists.get(i));
+        }
+
+        String country = currentLocation.getCountry(ipAddress);
+        System.out.println("Current country: " + country);
 
         MatchMusicTasteResult result = new MatchMusicTasteResult();
         result.setPercentage(56);
         MatchMusicTasteResponse resp = new MatchMusicTasteResponse();
         resp.setResult(result);
-
-        tasteOMeter.callTasteOMeter("Jansuun","fairyglen","3");
-        System.out.println(currentLocation.getCountry("89.98.201.249"));
-
 
         return resp;
     }

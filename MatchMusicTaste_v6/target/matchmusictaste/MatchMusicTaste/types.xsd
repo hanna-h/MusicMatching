@@ -29,7 +29,7 @@
         <all>
             <element name="lastfmApiKey" type="string"/>
             <element name="lastfmSecret" type="string"/>
-            <element name="mapsApiKey" type="string"/>
+            <element name="ipaddress" type="string"/>
             <element name="username1" type="string"/>
             <element name="username2" type="string"/>
         </all>
