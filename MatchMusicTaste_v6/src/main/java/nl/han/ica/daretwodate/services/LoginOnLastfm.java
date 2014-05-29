@@ -18,6 +18,7 @@ import java.security.MessageDigest;
 public class LoginOnLastfm implements ILoginOnLastfm {
 
     private String sessionKey;
+    private String apiSignature;
 
     public boolean login(String userName, String password, String apiKeyLastfm, String secret) {
         sessionKey = "";
@@ -25,7 +26,9 @@ public class LoginOnLastfm implements ILoginOnLastfm {
         try
         {
             // Get the api signature
-            String sig = constructSignature(userName, password, apiKeyLastfm, secret);
+            constructSignature(userName, password, apiKeyLastfm, secret);
+
+            System.out.println("apisig: " + apiSignature);
 
             // Construct the parameter list
             List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
@@ -33,7 +36,7 @@ public class LoginOnLastfm implements ILoginOnLastfm {
             urlParameters.add(new BasicNameValuePair("username", userName));
             urlParameters.add(new BasicNameValuePair("password", password));
             urlParameters.add(new BasicNameValuePair("api_key", apiKeyLastfm));
-            urlParameters.add(new BasicNameValuePair("api_sig", sig));
+            urlParameters.add(new BasicNameValuePair("api_sig", apiSignature));
 
             // Construct and set the https POST message
             HttpClient client =  HttpClientBuilder.create().build();
@@ -72,6 +75,10 @@ public class LoginOnLastfm implements ILoginOnLastfm {
         return sessionKey;
     }
 
+    public String getApiSignature() {
+        return apiSignature;
+    }
+
     private static String getCharacterDataFromElement(Element e)
     {
         Node child = e.getFirstChild();
@@ -83,7 +90,7 @@ public class LoginOnLastfm implements ILoginOnLastfm {
         return "?";
     }
 
-    private String constructSignature(String userName, String password, String apiKeyLastfm, String secret) {
+    private void constructSignature(String userName, String password, String apiKeyLastfm, String secret) {
         // construct the signature
         String sig = "api_key" + apiKeyLastfm + "methodauth.getMobileSessionpassword" + password +
                 "username" + userName + secret;
@@ -101,6 +108,6 @@ public class LoginOnLastfm implements ILoginOnLastfm {
             e.printStackTrace();
         }
 
-        return hex.toString();
+        apiSignature = hex.toString();
     }
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.han.nl/schemas/types"
+        xmlns:tns="http://www.han.nl/schemas/types"
+        elementFormDefault="qualified">
+
+    <complexType name="Event">
+        <all>
+            <element name="artist" type="string"/>
+            <element name="title" type="string"/>
+            <element name="venue" type="string"/>
+            <element name="city" type="string"/>
+            <element name="date" type="date"/>
+            <element name="time" type="string"/>
+        </all>
+    </complexType>
+
+    <complexType name="MatchMusicTasteResult">
+        <all>
+            <element name="loginSucceeded" type="int"/>
+            <element name="percentage" type="int"/>
+            <element name="events" type="tns:Event"/>
+            <element name="sendInviteSucceeded" type="boolean"/>
+            <element name="joinEventSucceeded" type="int"/>
+        </all>
+    </complexType>
+
+    <complexType name="MatchMusicTasteInput">
+        <all>
+            <element name="lastfmApiKey" type="string"/>
+            <element name="lastfmSecret" type="string"/>
+            <element name="ipaddress" type="string"/>
+            <element name="username1" type="string"/>
+            <element name="username2" type="string"/>
+        </all>
+    </complexType>
+</schema>
+
+

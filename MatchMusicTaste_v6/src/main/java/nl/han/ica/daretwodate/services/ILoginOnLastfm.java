@@ -6,4 +6,5 @@ package nl.han.ica.daretwodate.services;
 public interface ILoginOnLastfm {
     boolean login(String userName, String password, String apiKeyLastfm, String secret);
     String getSessionKey();
+    String getApiSignature();
 }

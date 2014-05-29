@@ -51,6 +51,8 @@ public class MatchMusicTasteEndpoint {
         System.out.println("Get user from database test: " + matchMusicTasteDao.getUser("fairyglen").getLastfmUsername());
 
         loginOnLastfm.login(user1, "rainbow", lastfmApiKey, lastfmSecret);
+        String lastfmSessionKey = loginOnLastfm.getSessionKey();
+        String lastfmApiSignature = loginOnLastfm.getApiSignature();
         System.out.println("Login session key: " + loginOnLastfm.getSessionKey());
 
         tasteOMeter.callTasteOMeter(user1, user2, "10", lastfmApiKey);
@@ -62,6 +64,8 @@ public class MatchMusicTasteEndpoint {
 
         String country = currentLocation.getCountry(ipAddress);
         System.out.println("Current country: " + country);
+
+        joinEvent.joinEvent(lastfmApiKey, lastfmApiSignature, lastfmSessionKey, 1, 3829307);
 
         MatchMusicTasteResult result = new MatchMusicTasteResult();
         result.setPercentage(56);
