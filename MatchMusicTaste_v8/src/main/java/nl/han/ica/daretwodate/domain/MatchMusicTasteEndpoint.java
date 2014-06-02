@@ -11,6 +11,8 @@ import org.springframework.oxm.Unmarshaller;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 @Endpoint
@@ -19,7 +21,7 @@ public class MatchMusicTasteEndpoint {
     private Marshaller marshaller;
     private Unmarshaller unmarshaller;
     private ICurrentLocation currentLocation;
-    private EventsForArtist eventsForArtist;
+    private IEventsForArtist eventsForArtist;
     private JoinEvent joinEvent;
     private LoginOnLastfm loginOnLastfm;
     private ITasteOMeter tasteOMeter;
@@ -48,6 +50,9 @@ public class MatchMusicTasteEndpoint {
         String user1 = req.getInput().getUsername1();
         String user2 = req.getInput().getUsername2();
 
+        MatchMusicTasteResult result = new MatchMusicTasteResult();
+
+
         System.out.println("Get user from database test: " + matchMusicTasteDao.getUser("fairyglen").getLastfmUsername());
 
         if (loginOnLastfm.login(user1, "rainbow", lastfmApiKey, lastfmSecret) ) {
@@ -63,8 +68,21 @@ public class MatchMusicTasteEndpoint {
                     System.out.println(commonArtists.get(i));
                 }
 
-                String country = currentLocation.getCountry(ipAddress);
-                System.out.println("Current country: " + country);
+                result.setPercentage(tasteOMeter.getTasteOMeterPercentage());
+
+
+                List <HashMap> events = eventsForArtist.getEventsForArtist("Netherlands", commonArtists , lastfmApiKey);
+
+                HashMap <String, String> temp = (HashMap) events.get(0);
+                Event event = new Event();
+                event.setArtist(temp.get("artist"));
+                event.setCity(temp.get("city"));
+                event.setTitle(temp.get("title"));
+                event.setTime(temp.get("date"));
+                event.setVenue(temp.get("venue"));
+                //event.setCity("arnhem");
+                result.setEvents(event);
+
 
                 if (joinEvent.joinEvent(lastfmApiKey, lastfmSessionKey, "3849720", "2", lastfmSecret) ) {
                     System.out.println("Joined event succesfully");
@@ -73,8 +91,6 @@ public class MatchMusicTasteEndpoint {
 
         }
 
-        MatchMusicTasteResult result = new MatchMusicTasteResult();
-        result.setPercentage(56);
         MatchMusicTasteResponse resp = new MatchMusicTasteResponse();
         resp.setResult(result);
 

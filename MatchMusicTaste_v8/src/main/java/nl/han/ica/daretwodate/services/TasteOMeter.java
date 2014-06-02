@@ -17,6 +17,7 @@ public class TasteOMeter implements ITasteOMeter
 {
     private String apiKeyLastfm;
     private float score;
+    private int scoreInt;
     private List<String> commonArtists = new ArrayList<String>();
 
     public boolean callTasteOMeter(String user1, String user2, String limit, String lastfmApiKey)
@@ -58,6 +59,8 @@ public class TasteOMeter implements ITasteOMeter
             NodeList scoreList = doc.getElementsByTagName("score");
             Element line = (Element) scoreList.item(0);
             score = Float.parseFloat(getCharacterDataFromElement(line));
+            scoreInt = ((int) (score * 100));
+
             //System.out.println(score);
             if (score == 0) { // xml is not valid
                 return false;
@@ -82,8 +85,8 @@ public class TasteOMeter implements ITasteOMeter
         return true;
     }
 
-    public float getTasteOMeterPercentage() {
-        return score;
+    public int getTasteOMeterPercentage() {
+        return scoreInt;
     }
 
     public List<String> getTasteOMeterArtists() {

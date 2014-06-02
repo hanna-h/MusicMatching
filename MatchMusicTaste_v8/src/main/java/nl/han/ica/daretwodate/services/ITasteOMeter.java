@@ -6,6 +6,6 @@ import java.util.List;
  */
 public interface ITasteOMeter {
     boolean callTasteOMeter(String user1, String user2, String limit, String lastfmApiKey);
-    float getTasteOMeterPercentage();
+    int getTasteOMeterPercentage();
     List<String> getTasteOMeterArtists();
 }
