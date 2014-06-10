@@ -17,6 +17,7 @@
     <bean id="applyregistration" class="nl.han.dare2date.service.web.applyregistration.ApplyRegistrationServiceEndpoint">
         <constructor-arg ref="marshaller"/>
         <constructor-arg ref="unmarshaller"/>
+        <constructor-arg ref="serviceLocator"/>
     </bean>
     <bean class="org.springframework.ws.server.endpoint.adapter.MarshallingMethodEndpointAdapter">
         <constructor-arg ref="marshaller"/>
@@ -26,6 +27,8 @@
     </bean>
     <bean id="unmarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
         <property name="contextPath" value="nl.han.dare2date"/>
+    </bean>
+    <bean id="serviceLocator" class="locator.ServiceLocator">
     </bean>
     <bean id="annotationMapping"
           class="org.springframework.ws.server.endpoint.mapping.PayloadRootAnnotationMethodEndpointMapping">
