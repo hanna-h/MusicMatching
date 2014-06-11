@@ -1,7 +1,9 @@
-package locator;
+package nl.han.dare2date.service.locator;
 
-import nl.han.dare2date.service.web.confirmregistration.*;
-import nl.han.dare2date.service.web.validatecreditcard.*;
+import nl.han.dare2date.service.web.confirmregistration.ConfirmRegistrationService;
+import nl.han.dare2date.service.web.confirmregistration.IConfirmRegistrationService;
+import nl.han.dare2date.service.web.validatecreditcard.IValidateCreditcardService;
+import nl.han.dare2date.service.web.validatecreditcard.ValidateCreditcardService;
 
 import java.util.HashMap;
 import java.util.Map;

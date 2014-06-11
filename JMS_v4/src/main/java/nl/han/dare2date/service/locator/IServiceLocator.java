@@ -1,4 +1,4 @@
-package locator;
+package nl.han.dare2date.service.locator;
 
 /**
  * Created by root on 6-6-14.

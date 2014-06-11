@@ -1,4 +1,4 @@
-package creditcard.check.jms;
+package creditcheck.service.jms;
 
 /**
  * Created by root on 5-6-14.
